@@ -1,0 +1,1 @@
+document.style.backgroundColor = 'white';

@@ -1,4 +1,62 @@
+@use 'colors' as color;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 body {
-	background-color: black;
-	color: white;
+	background-color: rgb(255, 255, 255);
+	color: color.$black-color;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.nav-desktop {
+	top: 0;
+	position: sticky;
+	z-index: 10;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1400px;
+    margin: 0 auto;
+    height: 10vh;
+	padding: 0 60px;
+	&__title {
+		font-weight: 400;
+		font-size: 36px;
+		i {
+			color: rgb(67, 67, 67);
+		}
+	}
+
+	ul {
+		li {
+			list-style: none;
+			text-decoration: none;
+			a {
+                padding: 2rem;
+				font-weight: lighter;
+				text-decoration: none;
+				font-size: 24px;
+                color: color.$black-color;
+				transition: background-color 0.3s, color 0.3s;
+
+				&:hover {
+					background-color: rgb(49, 46, 46);
+					color: color.$white-color;
+				}
+			}
+		}
+	}
+
+	.active {
+		background-color: color.$black-color;
+        color: color.$white-color;
+	}
 }

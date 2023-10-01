@@ -68,19 +68,19 @@ body {
 .hamburger {
 	padding: 10px;
 	cursor: pointer;
-    background: none;
-    border: 1px solid transparent;
-    border-radius: 15px;
-    transition: top .3s, transform .3s;
+	background: none;
+	border: 1px solid transparent;
+	border-radius: 15px;
+	transition: top 0.3s, transform 0.3s, background-color 0.3s;
 
-    &:active {
-        border: 1px solid black;
-    }
+	&:active {
+		border: 1px solid black;
+	}
 
 	&__box {
 		position: relative;
-		height: 40px;
-		width: 50px;
+		height: 50px;
+		width: 40px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -100,26 +100,46 @@ body {
 			@include mixins.btn;
 			top: 10px;
 		}
-	}    
-
+	}
 }
 
-.hamburger--active{
-    .hamburger__inner{
-        background-color: transparent;
-   
-   
-        &::after{
-            top: 0px;
-            transform: rotate(45deg);
+.hamburger--active {
+	.hamburger__inner {
+		background-color: transparent;
 
-        }
+		&::after {
+			top: 0px;
+			transform: rotate(315deg);
+		}
 
-        &::before{
-            top: 0px;
-            transform: rotate(-45deg);
-        }
-    }
+		&::before {
+			top: 0px;
+			transform: rotate(-315deg);
+		}
+	}
+}
 
-   
+.nav-bar-mobile {
+	position: relative;
+}
+
+.nav-bar__mobile-menu {
+	position: absolute;
+	top: 10vh;
+	right: 20px;
+	width: 200px;
+	background-color: rgba(117, 106, 106, 0.8);
+	text-align: center;
+	overflow: hidden;
+	transform: translateY(-550px);
+	border-radius: 10px;
+	transition: transform 0.3s;
+	li {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.show-nav-bar {
+	transform: translateY(0);
 }

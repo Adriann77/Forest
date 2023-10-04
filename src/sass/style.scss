@@ -18,6 +18,11 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+// NAV //
+// NAV //
+// NAV //
+// NAV //
+
 nav {
 	z-index: 500;
 	background-color: color.$white-color;
@@ -163,10 +168,15 @@ nav {
 	transform: translateY(0);
 }
 
+// MAIN SECTIONS //
+// MAIN SECTIONS //
+// MAIN SECTIONS //
+// MAIN SECTIONS //
+
 main {
 	.hero-bg {
 		position: relative;
-		background-image: url(/src/img/jungle-1807476_640.jpg);
+		background-image: url(/img/jungle-1807476_640.jpg);
 		padding-bottom: 20rem;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -227,9 +237,9 @@ main {
 	}
 
 	.hero-bg2 {
-        margin-top: 60px;
+		margin-top: 60px;
 		position: relative;
-		background-image: url(/src/img/girl-5785590_640.jpg);
+		background-image: url(/img/girl-5785590_640.jpg);
 		padding: 12rem;
 		background-position: center;
 		background-size: 250%;
@@ -254,7 +264,74 @@ main {
 			padding: 2rem;
 		}
 	}
+	.ofert {
+		.wrapper {
+			padding: 4rem;
+		}
+		&__title {
+			text-align: center;
+			font-size: 2rem;
+			font-weight: normal;
+			margin-bottom: 1rem;
+		}
+
+		p{
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+
+		&__cards{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+
+			&--box{
+
+				margin-bottom: 20px;
+				box-shadow: 0px 0px 5px rgb(107, 105, 105);
+				width: 300px;
+
+				padding: 1rem;
+				border-radius: 8px;
+
+				h3{
+					text-align: center;
+					margin-bottom: 5px;
+				}
+				p{
+					font-weight: bold;
+					text-align: center;
+				}
+				li{
+					margin-left: 50px;
+					list-style: none;
+
+					i{
+						margin-right: 5px;
+					}
+				}
+
+				button{
+					cursor: pointer;
+					align-self: center;
+					margin: 25px auto;
+					padding: .7rem 1.4rem;
+					border-radius: 7px;
+					width: 100%;
+					border: none;
+					box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+				}
+			}
+		}
+	}
 }
+
+// MEDIA QUERIES //
+// MEDIA QUERIES //
+// MEDIA QUERIES //
+// MEDIA QUERIES //
+// MEDIA QUERIES //
 
 @media (min-width: 316px) {
 	.nav-bar {
@@ -309,14 +386,14 @@ main {
 			}
 		}
 
-        .hero-bg2{
-            background-size: 180%;
+		.hero-bg2 {
+			background-size: 180%;
 
-            .hero-bg2__title{
-                font-size: 24px;
-                padding: 20px 80px;
-            }
-        }
+			.hero-bg2__title {
+				font-size: 24px;
+				padding: 20px 80px;
+			}
+		}
 	}
 }
 
@@ -337,14 +414,14 @@ main {
 			}
 		}
 
-        .hero-bg2{
-            background-size: 140%;
+		.hero-bg2 {
+			background-size: 140%;
 
-            .hero-bg2__title{
-                font-size: 2.5em;
-                padding: 20px 80px;
-            }
-        }
+			.hero-bg2__title {
+				font-size: 2.5em;
+				padding: 20px 80px;
+			}
+		}
 	}
 }
 
@@ -367,7 +444,7 @@ main {
 
 	main {
 		.hero-bg {
-			background-image: url(/img/jungle-1807476_640.jpg);
+			background-image: url(/img/jungle-1807476_1920.jpg);
 			background-position-y: 75%;
 			background-size: cover;
 			padding: 15rem;
@@ -404,16 +481,15 @@ main {
 				}
 			}
 		}
-        .hero-bg2{
-            background-size: 80%;
-            background-image: url(/src/img/girl-5785590_1920.jpg);
-            
+		.hero-bg2 {
+			background-size: 80%;
+			background-image: url(/img/girl-5785590_1920.jpg);
 
-            .hero-bg2__title{
-                font-size: 3.5rem;
-                padding: 2rem 10rem;
-                font-weight: normal;
-            }
-        }
+			.hero-bg2__title {
+				font-size: 3.5rem;
+				padding: 2rem 10rem;
+				font-weight: normal;
+			}
+		}
 	}
 }

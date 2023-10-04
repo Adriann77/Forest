@@ -359,6 +359,49 @@ main {
 	}
 }
 
+footer{
+	background-color: rgb(107, 105, 105, .1);
+	.wrapper{
+		padding: 30px;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+
+	.left-side{
+		display: none;
+	}
+
+	.right-side{
+		display: flex;
+		justify-content: space-around;
+		
+		
+
+
+	}
+
+	ul{
+		
+		li{
+			list-style: none;
+			margin-bottom: 8px;
+			a{
+				text-decoration: none;
+				color: color.$black-color;
+			}
+		}
+		.footer__title{
+			font-weight: bold;
+			margin-bottom: 15px;
+		}
+	}
+
+	.yearcomp{
+		text-align: center;
+		margin: 20px;
+	}
+}
+
 // MEDIA QUERIES //
 // MEDIA QUERIES //
 // MEDIA QUERIES //

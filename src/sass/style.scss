@@ -275,52 +275,76 @@ main {
 			margin-bottom: 1rem;
 		}
 
-		p{
+		p {
 			text-align: center;
 			margin-bottom: 2rem;
 		}
 
-		&__cards{
+		&__cards {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			flex-direction: column;
 
-			&--box{
 
+
+			&--box {
+				position: relative;
 				margin-bottom: 20px;
 				box-shadow: 0px 0px 5px rgb(107, 105, 105);
 				width: 300px;
-
+				height: 300px;
 				padding: 1rem;
 				border-radius: 8px;
+				transition: transform .3s;
 
-				h3{
+				&:hover{
+					transform: scale(1.05);
+				}
+
+				h3 {
 					text-align: center;
 					margin-bottom: 5px;
 				}
-				p{
+				p {
 					font-weight: bold;
 					text-align: center;
 				}
-				li{
+				li {
 					margin-left: 50px;
 					list-style: none;
 
-					i{
+					i {
 						margin-right: 5px;
 					}
 				}
 
-				button{
+				button {
+					font-size: 1.2rem;
+					position: absolute;
 					cursor: pointer;
 					align-self: center;
 					margin: 25px auto;
-					padding: .7rem 1.4rem;
+					padding: 0.7rem 1.4rem;
 					border-radius: 7px;
-					width: 100%;
+					left: 50%;
+					bottom: 0;
+					width: 60%;
+					transform: translateX(-50%);
 					border: none;
 					box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+					transition: transform .3s;
+
+					&:hover{
+						transform: scale(1.05) translateX(-48%);
+						box-shadow: 0px 0px 10px rgba(109, 206, 73);
+
+					}
+				}
+			}
+			.second {
+				button {
+					background-color: color.$green-color;
 				}
 			}
 		}

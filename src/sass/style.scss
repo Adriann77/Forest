@@ -241,7 +241,7 @@ main {
 		margin-top: 60px;
 		position: relative;
 		background-image: url(/img/girl-5785590_640.jpg);
-		padding: 12rem;
+		padding: 11rem;
 		background-position: center;
 		background-size: 250%;
 		z-index: -1;
@@ -287,8 +287,6 @@ main {
 			align-items: center;
 			flex-direction: column;
 
-
-
 			&--box {
 				position: relative;
 				margin-bottom: 20px;
@@ -297,9 +295,9 @@ main {
 				height: 350px;
 				padding: 1rem;
 				border-radius: 8px;
-				transition: transform .3s;
+				transition: transform 0.3s;
 
-				&:hover{
+				&:hover {
 					transform: scale(1.05);
 				}
 
@@ -333,9 +331,9 @@ main {
 					transform: translateX(-50%);
 					border: none;
 					box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
-					transition: transform .3s;
-					
-					a{
+					transition: transform 0.3s;
+
+					a {
 						width: 60%;
 						padding: 1rem 2rem;
 						font-size: 1.2rem;
@@ -343,10 +341,9 @@ main {
 						color: color.$black-color;
 					}
 
-					&:hover{
+					&:hover {
 						transform: scale(1.05) translateX(-48%);
 						box-shadow: 0px 0px 10px rgba(109, 206, 73);
-
 					}
 				}
 			}
@@ -359,46 +356,41 @@ main {
 	}
 }
 
-footer{
-	background-color: rgb(107, 105, 105, .1);
-	.wrapper{
+footer {
+	background-color: rgb(107, 105, 105, 0.1);
+	.wrapper {
 		padding: 30px;
 		align-items: center;
 		justify-content: space-evenly;
 	}
 
-	.left-side{
+	.left-side {
 		display: none;
 	}
 
-	.right-side{
+	.right-side {
 		display: flex;
 		justify-content: space-around;
-		
-		
-
-
 	}
 
-	ul{
-		
-		li{
+	ul {
+		li {
 			list-style: none;
 			margin-bottom: 8px;
-			a{
+			a {
 				text-decoration: none;
 				color: color.$black-color;
 			}
 		}
-		.footer__title{
+		.footer__title {
 			font-weight: bold;
 			margin-bottom: 15px;
 		}
 	}
 
-	.yearcomp{
+	.yearcomp {
 		text-align: center;
-		margin: 20px;
+		padding: 20px;
 	}
 }
 
@@ -498,26 +490,52 @@ footer{
 			}
 		}
 
-		.ofert{
-			.ofert__title{
+		.ofert {
+			.ofert__title {
 				font-size: 2.5rem;
 			}
-			p{
+			p {
 				font-size: 1.4rem;
 			}
-			
-			.ofert__cards{
+
+			.ofert__cards {
 				display: flex;
 				flex-direction: row;
 				flex-wrap: wrap;
 			}
-			
-			.ofert__cards--box{
+
+			.ofert__cards--box {
 				margin-right: 20px;
 			}
-			
-			.second{
+
+			.second {
 				order: 1;
+			}
+		}
+	}
+
+	footer {
+		.wrapper {
+			display: flex;
+			padding: 30px;
+			align-items: start;
+			justify-content: space-evenly;
+		}
+
+		.left-side {
+			display: block;
+			h3 {
+				font-weight: 400;
+				font-size: 36px;
+				i {
+					color: rgb(67, 67, 67);
+				}
+			}
+		}
+
+		.right-side {
+			ul {
+				margin-right: 1.5rem;
 			}
 		}
 	}
@@ -592,45 +610,74 @@ footer{
 	}
 }
 @media (min-width: 1100px) {
-	.ofert{
-		.ofert__title{
+	.ofert {
+		.ofert__title {
 			font-size: 2.5rem;
 			margin-bottom: 4rem;
 		}
-		p{
+		p {
 			font-size: 2.4rem;
-			
 		}
-		
-		.ofert__cards{
+
+		.ofert__cards {
 			margin-top: 4rem;
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
 		}
-		
-		.ofert__cards--box{
+
+		.ofert__cards--box {
 			margin-right: 20px;
 		}
 
-		.third{
+		.third {
 			order: 2;
 		}
 
-		.ofert__cards--box{
+		.ofert__cards--box {
 			height: 400px;
-			h3{
+			h3 {
 				margin-bottom: 15px;
 				font-weight: normal;
 				font-size: 2rem;
 			}
-			p{
+			p {
 				font-size: 2.5rem;
 			}
 		}
-		
-		
 	}
 
-	
+	footer {
+		.wrapper {
+			display: flex;
+			padding: 5rem;
+			align-items: start;
+			justify-content: space-between;
+		}
+
+		.left-side {
+			display: block;
+			h3 {
+				font-weight: 400;
+				font-size: 4rem;
+				i {
+					color: rgb(67, 67, 67);
+				}
+			}
+		}
+
+		.right-side {
+			ul {
+				margin-right: 4rem;
+				.footer__title{
+					
+						font-size: 1.5rem;
+					
+				}
+				li{
+					margin-bottom: 1.4rem;
+				}
+			}
+		}
+	}
 }

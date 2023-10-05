@@ -5,7 +5,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
-const imagemin = require('gulp-imagemin');
 const sourcemaps = require('gulp-sourcemaps');
 const clean = require('gulp-clean');
 const kit = require('gulp-kit');
@@ -16,11 +15,10 @@ const paths = {
 	html: './html/**/*.kit',
 	sass: './src/sass/**/*.scss',
 	js: './src/js/**/*.js',
-	img: './src/img/*',
+
 	dist: './dist',
 	sassDest: './dist/css',
 	jsDest: './dist/js',
-	imgDest: './dist/img',
 };
 
 function sassCompiler(done) {
@@ -45,11 +43,6 @@ function javaScript(done) {
 		.pipe(dest(paths.jsDest));
 	done();
 }
-
-// function convertImages(done) {
-// 	src(paths.img).pipe(imagemin()).pipe(dest(paths.imgDest));
-// 	done();
-// }
 
 function handleKits(done) {
 	src(paths.html).pipe(kit()).pipe(dest('./'));

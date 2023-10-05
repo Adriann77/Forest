@@ -241,6 +241,7 @@ main {
 		margin-top: 60px;
 		position: relative;
 		background-image: url(/dist/img/girl-5785590_640.jpg);
+		background-attachment: fixed;
 		padding: 11rem;
 		background-position: center;
 		background-size: 250%;
@@ -600,7 +601,7 @@ footer {
 		.hero-bg2 {
 			background-size: 80%;
 			background-image: url(/dist/img/girl-5785590_1920.jpg);
-
+			background-attachment: fixed;
 			.hero-bg2__title {
 				font-size: 3.5rem;
 				padding: 2rem 10rem;

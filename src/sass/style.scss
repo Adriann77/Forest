@@ -269,6 +269,7 @@ main {
 	}
 	.ofert {
 		.wrapper {
+			position: relative;
 			padding: 4rem;
 		}
 		&__title {
@@ -281,6 +282,43 @@ main {
 		p {
 			text-align: center;
 			margin-bottom: 2rem;
+		}
+
+		&__btn {
+			position: absolute;
+			padding: 0.4rem;
+			margin: 10px;
+			right: 0;
+			bottom: 0;
+			border: none;
+			background-color: transparent;
+			a {
+				font-size: 1.5rem;
+				text-decoration: none;
+				color: color.$black-color;
+				transition: font-size 0.3s, color 0.3s;
+				&:hover {
+					font-size: 1.8rem;
+					color: color.$green-color;
+					
+				}
+
+				&:hover::after{
+					width: 100%;
+					background-color: color.$black-color;
+				}
+				&::after {
+					position: absolute;
+					content: '';
+					bottom: 0;
+					left: 0;
+					width: 30px;
+					height: 3px;
+					background-color: color.$green-color;
+					transition: background-color .3s, width .6s;
+				}
+			}
+
 		}
 
 		&__cards {
@@ -671,12 +709,10 @@ footer {
 		.right-side {
 			ul {
 				margin-right: 4rem;
-				.footer__title{
-					
-						font-size: 1.5rem;
-					
+				.footer__title {
+					font-size: 1.5rem;
 				}
-				li{
+				li {
 					margin-bottom: 1.4rem;
 				}
 			}

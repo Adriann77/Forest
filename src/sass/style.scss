@@ -149,13 +149,13 @@ nav {
 .nav-bar__mobile-menu {
 	position: absolute;
 	top: 10vh;
-	right: 20px;
-	width: 200px;
+	width: 100%;
+	left: 0;
 	background-color: rgba(0, 0, 0, 0.8);
 	text-align: center;
 	overflow: hidden;
 	transform: translateY(-750px);
-	border-radius: 10px;
+	
 	transition: transform 0.3s;
 	li {
 		display: flex;

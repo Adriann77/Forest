@@ -17,14 +17,7 @@ allNavItems.forEach(el =>
 );
 currYear.textContent = new Date().getFullYear();
 
-navLinks.forEach(item =>
-	item.addEventListener('scroll', () => {
-		console.log(item);
-	})
-);
 
-document.addEventListener('scroll', () => {
-	navLinks.forEach(item => console.log(item));
-});
+
 
 

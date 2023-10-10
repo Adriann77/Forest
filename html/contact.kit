@@ -75,7 +75,7 @@
                                     <p>782 698 557</p>
                                 </div>
                                 <div class="box__left--support">
-    
+
                                     <span><i class="fa-solid fa-envelope"></i> E-mail</span>
                                     <p>forest@forest.com</p>
                                 </div>
@@ -96,20 +96,20 @@
                 <div class="form">
                     <h3>Wyslij nam wiadomosc</h3>
 
-                    <div class="form__text text">
-                        <label for="imie">Imie:</label>
-                        <input id="imie" type="text">
-                        <p class="error">jeszcze cos wykmninie</p>
+                    <div class="form__text text" onchange="checkName(imie)">
+                        <label for="name">Imie:</label>
+                        <input id="name" type="text">
+                        <p class="error">Podaj swoje imie!</p>
                     </div>
-                    <div class="form__text email">
+                    <div class="form__text email" onchange="validateEmail(email)">
                         <label for="email">Adres email: </label>
                         <input id="email" type="email">
-                        <p class="error">jeszcze cos wykmninie</p>
+                        <p class="error">Podaj swoj email</p>
                     </div>
-                    <div class="form__text message">
-                        <label for="message">Wpisz tresc wiadomosci:</label>
-                        <p class="error">jeszcze cos wykmninie</p>
+                    <div class="form__text message" onchange="checkMessage(message)">
+                        <label for="message">Wpisz tresc wiadomosci: </label>
                         <textarea name="" id="message" cols="30" rows="10"></textarea>
+                        <p class="error">brak wiadomosci</p>
 
                     </div>
                     <button class="form__btn">Wyslij wiadomosc</button>
@@ -127,6 +127,7 @@
     <!-- @include 'footer.kit' -->
 
 
+    <script src="./dist/js/form_walidator.min.js"></script>
     <script src="./dist/js/script.min.js"></script>
 </body>
 

@@ -3,6 +3,7 @@ const email = document.querySelector('#email');
 const formBtn = document.querySelector('.form__btn');
 const message = document.querySelector('#message');
 const error = document.querySelectorAll('.error');
+const popup = document.querySelector('.popup');
 
 let errorCount = 0;
 
@@ -47,8 +48,22 @@ function validateEmail(email) {
 	}
 }
 
+const showPopup = () => {
+	if (errorCount === 0) {
+		popup.classList.add('show-popup');
+		setTimeout(() => {
+			popup.classList.remove('show-popup');
+		}, 2000);
+		clearInputs();
+	}
+};
+
 const deleteError = input => {
 	input.nextElementSibling.style.color = 'transparent';
+};
+
+const clearInputs = () => {
+	[imie, email, message].forEach(el => (el.value = ''));
 };
 
 formBtn.addEventListener('click', () => {
@@ -56,4 +71,5 @@ formBtn.addEventListener('click', () => {
 	checkName(imie);
 	validateEmail(email);
 	checkMessage(message);
+	showPopup();
 });

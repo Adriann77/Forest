@@ -532,6 +532,34 @@ main {
 				box-shadow: 0 0 15px rgba(95, 151, 52);
 			}
 		}
+
+		.popup{
+			position: absolute;
+			transform: translateY(-10000px);
+			width: 80%;
+			height: 100px;
+			text-align: center;
+			padding: 5rem;
+			border-radius: 15px;
+			
+			background-color: rgb(0, 0, 0, 0.6);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: transform .3s;
+
+			h4{
+				color: color.$white-color;
+				font-size: 1.5rem;
+
+			}
+		}
+
+		.show-popup{
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
 	}
 }
 

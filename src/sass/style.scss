@@ -170,6 +170,11 @@ nav {
 	transform: translateY(0);
 }
 
+.active {
+	background-color: color.$black-color;
+	color: color.$white-color;
+}
+
 // NAV //
 
 // MAIN SECTIONS //

@@ -22,7 +22,7 @@ Strona zawiera funkcję Scroll Spy, która umożliwia nawigację po długich str
 Strona zawiera formularz z aktywnym walidatorem, co oznacza, że użytkownicy otrzymają informacje zwrotne i ostrzeżenia w przypadku błędów podczas wypełniania formularza. To pomaga zapewnić poprawność danych.
 
 ## Projekt na GitHub
-Ten projekt jest moim pierwszym większym przedsięwzięciem, zrobionym od podstaw samemu. Projekt wykorzystuje design strony dostarczony przez mmcschool.
+Ten projekt jest moim pierwszym większym przedsięwzięciem, zrobionym od podstaw samemu. Stworzenie tej strony umozliwyly mi kursy od MMC School. 
 
 ## Autorzy
 - Adrian Klimas

@@ -12,7 +12,7 @@ window.addEventListener('scroll', () => {
 		case 0:
 			allNavItems[0].classList.add('active');
 			allNavItems[1].classList.remove('active');
-			allNavItems[3].classList.add('active');
+		
 			allNavItems[4].classList.remove('active');
 			break;
 

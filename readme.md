@@ -8,7 +8,7 @@
 - [Formularz z Walidatorem](#formularz-z-walidatorem)
 - [Projekt na GitHub](#projekt-na-github)
 - [Autorzy](#autorzy)
-- [Licencja](#licencja)
+
 
 
 
@@ -28,7 +28,4 @@ Ten projekt jest moim pierwszym większym przedsięwzięciem, zrobionym od podst
 - Adrian Klimas
 
 
-.
 
----
-&copy; 2023 Forest Group Company Ltd.

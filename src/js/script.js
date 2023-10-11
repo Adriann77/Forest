@@ -7,16 +7,26 @@ const sections = document.querySelectorAll('section');
 const homeSection = document.querySelector('.Home');
 const aboutusSection = document.querySelector('.aboutus');
 const ofertSection = document.querySelector('.ofert');
+let currentPos;
+
+window.addEventListener('scroll', () => {
+	currentPos = window.scrollY;
+});
 
 hamburger.addEventListener('click', () => {
 	hamburger.classList.toggle('hamburger--active');
 	mobile.classList.toggle('show-nav-bar');
+
+	if (hamburger.classList.contains('hamburger--active')) {
+		document.body.style.overflow = 'hidden';
+	}
 });
 
 allNavItems.forEach(el =>
 	el.addEventListener('click', () => {
 		mobile.classList.remove('show-nav-bar');
 		hamburger.classList.remove('hamburger--active');
+		document.body.style.overflow = 'visible';
 	})
 );
 currYear.textContent = new Date().getFullYear();

@@ -148,20 +148,22 @@ nav {
 
 .nav-bar__mobile-menu {
 	position: absolute;
-	top: 10vh;
+	top: 9vh;
+
 	width: 100%;
 	left: 0;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(199, 199, 191, 0.9);
 	text-align: center;
 	overflow: hidden;
 	transform: translateY(-750px);
-	
+
 	transition: transform 0.3s;
 	li {
 		display: flex;
 		flex-direction: column;
 		a {
-			color: color.$white-color;
+			color: color.$black-color;
+			font-size: 1.2rem;
 		}
 	}
 }
@@ -417,7 +419,6 @@ main {
 	.box {
 		height: 100%;
 		width: 100%;
-		
 
 		&__left,
 		&__right {
@@ -454,7 +455,6 @@ main {
 			iFrame {
 				border: none;
 				border-radius: 8px;
-				
 			}
 		}
 	}
@@ -475,7 +475,7 @@ main {
 				color: transparent;
 			}
 
-			.show-error{
+			.show-error {
 				color: red;
 			}
 
@@ -502,14 +502,13 @@ main {
 			}
 		}
 
-		.message{
-
-			&::before{
+		.message {
+			&::before {
 				content: 'Min 30 znakow';
 				font-size: 0.8rem;
 				color: rgb(0, 0, 0, 0.6);
 			}
-			.error{
+			.error {
 				position: absolute;
 				bottom: 50px;
 				left: 0;
@@ -538,7 +537,7 @@ main {
 			}
 		}
 
-		.popup{
+		.popup {
 			position: absolute;
 			transform: translateY(-10000px);
 			width: 80%;
@@ -546,21 +545,20 @@ main {
 			text-align: center;
 			padding: 5rem;
 			border-radius: 15px;
-			
+
 			background-color: rgb(0, 0, 0, 0.6);
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			transition: transform .3s;
+			transition: transform 0.3s;
 
-			h4{
+			h4 {
 				color: color.$white-color;
 				font-size: 1.5rem;
-
 			}
 		}
 
-		.show-popup{
+		.show-popup {
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
@@ -951,8 +949,6 @@ footer {
 				display: none;
 			}
 
-			
-
 			.box__left {
 				position: relative;
 				background-image: url(../img/avenue-815297_640.jpg);
@@ -962,7 +958,7 @@ footer {
 				background-size: cover;
 				z-index: -1;
 				padding: 2rem;
-				
+
 				.box__left--shadow {
 					width: 100%;
 					height: 100%;
@@ -972,8 +968,8 @@ footer {
 					position: absolute;
 					background-color: rgb(0, 0, 0, 0.6);
 				}
-				
-				.box__left--text{
+
+				.box__left--text {
 					display: flex;
 					flex-direction: column;
 					justify-content: space-evenly;
@@ -987,7 +983,6 @@ footer {
 				iFrame {
 					width: 600px;
 					height: 600px;
-
 				}
 			}
 		}

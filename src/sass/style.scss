@@ -10,7 +10,7 @@
 
 html {
 	scroll-behavior: smooth;
-	scroll-padding-top: 5vh;
+	scroll-padding-top: 10vh;
 }
 
 body {
@@ -149,7 +149,7 @@ nav {
 .nav-bar__mobile-menu {
 	position: absolute;
 	top: 9vh;
-
+	backdrop-filter: blur(2px);
 	width: 100%;
 	left: 0;
 	background-color: rgba(199, 199, 191, 0.9);
@@ -517,23 +517,18 @@ main {
 
 		.form__btn {
 			position: absolute;
-			bottom: 0;
-			transform: translateY(50%);
-
-			padding: 1rem;
-			margin: 25px auto;
-			width: 100%;
-			border-radius: 8px;
-			background: none;
+			bottom: -30px;
 			cursor: pointer;
-			transition: font-size 0.3s, background-color 0.3s, padding 0.3s, border 0.3s, box-shadow 0.3s;
+			width: 100%;
+			font-size: 1.5rem;
+			padding: 1rem;
+			border-radius: 8px;
+			transition: background-color 0.3s, box-shadow 0.3s;
+			border: 1px solid rgb(0, 0, 0, 0.1);
 
 			&:hover {
 				background-color: color.$green-color;
-				font-size: 1.4rem;
-				padding: 1.2rem;
-				border: none;
-				box-shadow: 0 0 15px rgba(95, 151, 52);
+				box-shadow: 0 0 10px color.$green-color;
 			}
 		}
 
@@ -545,7 +540,6 @@ main {
 			text-align: center;
 			padding: 5rem;
 			border-radius: 15px;
-
 			background-color: rgb(0, 0, 0, 0.6);
 			display: flex;
 			align-items: center;

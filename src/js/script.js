@@ -7,11 +7,6 @@ const sections = document.querySelectorAll('section');
 const homeSection = document.querySelector('.Home');
 const aboutusSection = document.querySelector('.aboutus');
 const ofertSection = document.querySelector('.ofert');
-let currentPos;
-
-window.addEventListener('scroll', () => {
-	currentPos = window.scrollY;
-});
 
 hamburger.addEventListener('click', () => {
 	hamburger.classList.toggle('hamburger--active');
@@ -19,6 +14,8 @@ hamburger.addEventListener('click', () => {
 
 	if (hamburger.classList.contains('hamburger--active')) {
 		document.body.style.overflow = 'hidden';
+	} else {
+		document.body.style.overflow = 'visible';
 	}
 });
 
@@ -31,40 +28,20 @@ allNavItems.forEach(el =>
 );
 currYear.textContent = new Date().getFullYear();
 
-const sectionMargin = 90;
-
-window.addEventListener('scroll', () => {
-	const current =
-		sections.length -
-		[...sections].reverse().findIndex(section => window.scrollY >= section.offsetTop - sectionMargin) -
-		1;
-
-	console.log(current);
-	switch (current) {
-		case 1:
-			allNavItems[0].classList.remove('active');
-			allNavItems[1].classList.add('active');
-			allNavItems[2].classList.remove('active');
-			allNavItems[3].classList.remove('active');
-			allNavItems[4].classList.add('active');
-			allNavItems[5].classList.remove('active');
-			break;
-
-		case 3:
-			allNavItems[1].classList.remove('active');
-			allNavItems[2].classList.add('active');
-			allNavItems[3].classList.remove('active');
-			allNavItems[4].classList.remove('active');
-			allNavItems[5].classList.add('active');
-			allNavItems[6].classList.remove('active');
-			break;
-		case 4:
-			allNavItems[0].classList.add('active');
-			allNavItems[1].classList.remove('active');
-			allNavItems[3].classList.add('active');
-			allNavItems[4].classList.remove('active');
-
-			break;
+document.addEventListener('DOMContentLoaded', () => {
+	const currentPG = window.location.href;
+	if (currentPG.includes('offert')) {
+		allNavItems.forEach(el => {
+			el.classList.contains('ofert') ? el.classList.add('active')  : el.classList.remove('active')
+		});
+	}
+});
+document.addEventListener('DOMContentLoaded', () => {
+	const currentPG = window.location.href;
+	if (currentPG.includes('contact')) {
+		allNavItems.forEach(el => {
+			el.classList.contains('contact') ? el.classList.add('active')  : el.classList.remove('active')
+		});
 	}
 });
 

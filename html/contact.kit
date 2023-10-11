@@ -15,39 +15,7 @@
 <body>
 
 
-    <nav id="navbar" class="nav-bar">
-        <div class="wrapper">
-            <p class="nav-bar__title"><i class="fa-solid fa-tree"></i> Forest</p>
-            <ul class="nav-bar__desktop">
-                <li>
-                    <a class="" href="index.html">Home</a>
-
-                    <a href="contact.html" class="active">Kontakt</a>
-                </li>
-            </ul>
-
-
-            <button class="nav-bar__mobile hamburger">
-                <div class="hamburger__box">
-                    <div class="hamburger__inner"></div>
-                </div>
-            </button>
-
-
-            <ul class="nav-bar__mobile-menu ">
-                <li>
-                    <a class="nav-item " href="index.html">Home</a>
-
-                    <a class="nav-item active" href="contact.html">Kontakt</a>
-                </li>
-            </ul>
-
-        </div>
-
-
-
-
-    </nav>
+    <!-- @include 'nav.kit' -->
 
     <section class="contact">
 
@@ -96,22 +64,25 @@
                 <div class="form">
                     <h3>Wyslij nam wiadomosc</h3>
 
-                    <div class="form__text text" onchange="checkName(imie)">
-                        <label for="name">Imie:</label>
-                        <input id="name" type="text">
-                        <p class="error">Podaj swoje imie!</p>
-                    </div>
-                    <div class="form__text email" onchange="validateEmail(email)">
-                        <label for="email">Adres email: </label>
-                        <input id="email" type="email">
-                        <p class="error">Podaj swoj email</p>
-                    </div>
-                    <div class="form__text message" onchange="checkMessage(message)">
-                        <label for="message">Wpisz tresc wiadomosci: </label>
-                        <textarea name="" id="message" cols="30" rows="10"></textarea>
-                        <p class="error">brak wiadomosci</p>
+                    <form action="
+                    ">
+                        <div class="form__text text" onchange="checkName(imie)">
+                            <label for="name">Imie:</label>
+                            <input id="name" type="text">
+                            <p class="error">Podaj swoje imie!</p>
+                        </div>
+                        <div class="form__text email" onchange="validateEmail(email)">
+                            <label for="email">Adres email: </label>
+                            <input id="email" type="email">
+                            <p class="error">Podaj swoj email</p>
+                        </div>
+                        <div class="form__text message" onchange="checkMessage(message)">
+                            <label for="message">Wpisz tresc wiadomosci: </label>
+                            <textarea name="" id="message" cols="30" rows="10"></textarea>
+                            <p class="error">brak wiadomosci</p>
 
-                    </div>
+                        </div>
+                    </form>
                     <button class="form__btn">Wyslij wiadomosc</button>
 
                     <div class="popup ">
@@ -119,7 +90,7 @@
                             <h4>Wiadomosc zostala wyslana :) </h4>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
 

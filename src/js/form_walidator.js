@@ -26,10 +26,13 @@ const clearError = input => {
 
 const checkMessage = input => {
 	if (input.value === '') {
-		showError(input);
+		input.nextElementSibling.style.color = 'red';
+		input.nextElementSibling.textContent = 'brak wiadomosci';
+        errorCount++
 	} else {
 		if (input.value.length < 30) {
 			input.nextElementSibling.textContent = 'Twoja wiadomosc jest za krotka!';
+            errorCount++
 		} else {
 			clearError(input);
 		}

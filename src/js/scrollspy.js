@@ -1,44 +1,20 @@
-const sectionMargin = 100;
+function activateMenuLink(sectionId) {
+	document.querySelectorAll('.nav-item').forEach(item => {
+		item.classList.remove('active');
+	});
 
+	document.querySelector(`.nav-item[href="index.html#${sectionId}"]`).classList.add('active');
+}
 
-window.addEventListener('scroll', () => {
-	const current =
-		sections.length -
-		[...sections].reverse().findIndex(section => window.scrollY >= section.offsetTop - sectionMargin) -
-		1;
-	console.log(current);
+function onScroll() {
+	const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-	switch (current) {
-		case 0:
-			allNavItems[0].classList.add('active');
-			allNavItems[1].classList.remove('active');
-		
-			allNavItems[4].classList.remove('active');
-			break;
+	document.querySelectorAll('section').forEach(section => {
+		if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+			activateMenuLink(section.id);
+		}
+	});
+}
 
-		case 1:
-			allNavItems[0].classList.remove('active');
-			allNavItems[1].classList.add('active');
-			allNavItems[2].classList.remove('active');
-			allNavItems[3].classList.remove('active');
-			allNavItems[4].classList.add('active');
-			allNavItems[5].classList.remove('active');
-			break;
-
-		case 3:
-			allNavItems[1].classList.remove('active');
-			allNavItems[2].classList.add('active');
-			allNavItems[3].classList.remove('active');
-			allNavItems[4].classList.remove('active');
-			allNavItems[5].classList.add('active');
-			allNavItems[6].classList.remove('active');
-			break;
-		case 4:
-			allNavItems[0].classList.add('active');
-			allNavItems[1].classList.remove('active');
-			allNavItems[3].classList.add('active');
-			allNavItems[4].classList.remove('active');
-
-			break;
-	}
-});
+window.addEventListener('scroll', onScroll);
+document.addEventListener('DOMContentLoaded', onScroll);
